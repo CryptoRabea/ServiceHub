@@ -1,0 +1,23 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    
+    dependencies {
+        implementation 'androidx.appcompat:appcompat:1.6.1'
+        implementation 'androidx.webkit:webkit:1.8.0'
+    }
+    
+    compileSdk 34
+    ndkVersion "21.4.7075584"
+    
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
+        proguardRules getDefaultProguardFile('proguard-rules.pro')
+        signingConfig signingConfigs.release
+    }
+}
+}
